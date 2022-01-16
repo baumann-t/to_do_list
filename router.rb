@@ -27,6 +27,7 @@ loop do
     when 4
       controller.delete_task
     when 5
+      controller.exit
       break
     else
       puts 'incorrect input'

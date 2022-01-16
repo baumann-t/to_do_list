@@ -12,7 +12,7 @@ class Controller
   #CRUD
   def create()
     task_name = @view.ask_user_description
-    task = Task.new(task_name)
+    task = Task.new(task_name, false)
     @repo.add(task)
   end
 
@@ -28,6 +28,10 @@ class Controller
   def mark_completed()
     task = @view.mark_completed
     @repo.find(task.to_i - 1).change_status
+  end
+
+  def exit
+    @repo.store_data
   end
 
 end

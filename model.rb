@@ -4,9 +4,9 @@ class Task
   attr_reader :name
   attr_reader :status
 
-  def initialize (name)
+  def initialize (name, status)
     @name = name
-    @status = false
+    @status = status
   end
 
   def change_status
